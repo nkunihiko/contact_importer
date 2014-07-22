@@ -3,7 +3,10 @@
 
 from .base import BaseProvider
 from lxml import etree
-from urllib import urlencode
+try:
+    from urllib import urlencode
+except ImportError:
+    from urllib.parse import urlencode
 import requests
 import json
 

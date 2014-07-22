@@ -7,13 +7,17 @@ try:
 except IOError:
     README = ''
 
-version = "0.0.1"
+version = "0.0.2"
 
 setup(name='contact_importer',
       version=version,
       description="Import Gmail, Live and Yahoo contacts within your Python application.",
       long_description=README,
-      classifiers=[], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
+      classifiers=[
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 3',
+      ], # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       keywords='',
       author='Unknown',
       author_email='',

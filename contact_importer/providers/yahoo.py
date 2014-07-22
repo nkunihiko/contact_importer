@@ -3,8 +3,14 @@
 
 from .base import BaseProvider
 from ..lib import oauth1 as oauth
-from urllib import urlencode
-from urlparse import parse_qs
+try:
+    from urllib import urlencode
+except ImportError:
+    from urllib.parse import urlencode
+try:
+    from urlparse import parse_qs
+except ImportError:
+    from urllib.parse import parse_qs
 from uuid import uuid4 as uuid
 from collections import OrderedDict
 from time import time
